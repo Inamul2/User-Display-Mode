@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link id="mystylesheet" rel="stylesheet" type="text/css" href="/static/light.css">
+    
+  </head>
+  <body>
+    <div class="container text-center" style="margin-top:10%;height:25%;" >
+    <button type="button" class="btn mx-3" style="background-color:#f2f2f2;width:100px" onclick="swapStyle('static/light.css')">Light</button>
+    <button type="button" class="btn mx-3" style="background-color:#000000;width:100px" onclick="swapStyle('static/dark.css')"><span style="color:white;"> Dark </span></button>
+    <button type="button" class="btn mx-3" style="background-color:#192734;width:100px" onclick="swapStyle('static/blue.css')"><span style="color:white;"> Blue </span></button>
+    <button type="button" class="btn mx-3" style="background-color:#78866b;width:100px" onclick="swapStyle('static/green.css')"><span style="color:white;"> Green </span></button>
+    <button type="button" class="btn mx-3" style="background-color:#7E4C74;width:100px" onclick="swapStyle('static/purple.css')"><span style="color:white;"> Purple</span></button>
+    <div class="row my-3" id="row">
+    <div class="col-md-4">
+    <img src="static/cwi.png" alt="image" style=" height: 218px;margin: 20px;">
+    </div>
+    <div class="col-md-8" >
+    <h1 style="margin:20px;">CodeWithInamul</h1>
+    <p class="my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt veniam, nisi rem, fuga sapiente at repudiandae repellat mollitia voluptates vitae quo similique deleniti enim voluptatum. Eius pariatur expedita consequatur fugiat.</p>
+    </div>
+    </div>
+    </div>
+
+<script type="text/javascript">
+    var setTheme = localStorage.getItem('theme')
+		console.log('theme:', setTheme)
+
+		if (setTheme == null){
+			swapStyle('static/light.css')
+		}else{
+			swapStyle(setTheme)
+		}
+
+function swapStyle(sheet){
+			document.getElementById('mystylesheet').href = sheet
+			localStorage.setItem('theme', sheet)
+    }
+</script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
